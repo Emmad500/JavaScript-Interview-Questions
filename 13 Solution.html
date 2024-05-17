@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart Totalizer</title>
+</head>
+
+<body>
+    <h1>Shopping Cart Totalizer</h1>
+
+    <!-- Add a button to trigger user input -->
+    <button onclick="getUserInput()">Get User Input</button>
+
+    <!-- Display area for the user's name -->
+    <p id="greeting"></p>
+
+    <script>
+        // <!-- Shopping cart products (you can modify this array) -->
+        const shoppingCart = [
+            { name: "Aloe Vera", price: 59, quantity: 2 },
+            { name: "Marmorblad", price: 299, quantity: 1 },
+            // Add more products here...
+        ];
+
+        function getUserInput() {
+            const userName = prompt("Please enter your name:");
+            if (userName) {
+                // If the user provided input, calculate the total cost
+                const total = calculateTotal(shoppingCart);
+                displayGreeting(userName, total);
+            } else {
+                // If the user canceled, show a message
+                document.getElementById("greeting").textContent = "You canceled the input.";
+            }
+        }
+        function calculateTotal(products) {
+            let totalCost = 0;
+            for (const product of products) {
+                totalCost += product.price * product.quantity;
+            }
+            return totalCost;
+        }
+        function displayGreeting(userName, total) {
+            document.getElementById("greeting").textContent = `Hello, ${userName}! Your total cost is $${total}.`;
+        }
+
+    </script>
+
+</body>
+
+</html>
