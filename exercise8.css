@@ -1,0 +1,39 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling the body */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #f7cac9, #92a8d1);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Styling the time and alarm containers */
+#time, #alarm {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px 30px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 1.5em;
+}
+
+/* Adding some styles to the time display */
+#time {
+    font-size: 2em;
+    color: #333;
+}
+
+/* Styling the alarm message */
+#alarm {
+    font-size: 1.2em;
+    color: #e74c3c;
+}
