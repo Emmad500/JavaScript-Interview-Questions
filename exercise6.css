@@ -1,0 +1,28 @@
+/* exercise6.css */
+
+/* Style the body background */
+body {
+    background-color: rgb(17, 157, 204);
+}
+
+/* Style the heading */
+h1 {
+    color: navy;
+    margin-left: 20px;
+}
+
+/* Style the form container */
+.container {
+    margin-top: 20px;
+}
+
+/* Style the buttons */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
